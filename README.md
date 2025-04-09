@@ -69,7 +69,8 @@ Using Python, we analyzes restaurant data to compare the availability of online 
 
         sns.boxplot(x = 'rate', y = 'online_order', data = df)
 ![Image](https://github.com/user-attachments/assets/cb5d1d5e-e948-4425-bcff-3a670e686ed6)
-11. Last, crete heatmap based on restaurant type and has online order or no.
+
+11. Create heatmap based on restaurant type and has online order or no.
 
         pivot_table = df.pivot_table(index='online_order', columns='listed_in(type)', aggfunc='size')
         sns.heatmap(pivot_table, annot=True, cmap='seismic')
